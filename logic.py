@@ -103,21 +103,4 @@ class Game:
 
         return min_v, pos_x, pos_y
 
-    def play(self):
-        result = self.is_end()
 
-        if result is not None:
-            if result == 'X':
-                print('The winner is X')
-            elif result == 'O':
-                print('The winner is O')
-            else:
-                print('draw!')
-            return
-
-        if self.player_turn == 'X':
-
-            (m, px, py) = self.max()
-            self.curr_state[px][py] = 'O'
-            self.player_turn = 'X'
-            self.draw_bord()
